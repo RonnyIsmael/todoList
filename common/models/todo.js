@@ -35,6 +35,7 @@ module.exports = function(Todo) {
 
       }
     },function (err,eventosPendientes) {
+      if(err)callback(err);
       callback(null, eventosPendientes);
     })
 
