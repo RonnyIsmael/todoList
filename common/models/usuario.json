@@ -1,0 +1,27 @@
+{
+  "name": "Usuario",
+  "plural": "usuarios",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nombre": {
+      "type": "string"
+    },
+    "apellidos": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "todos": {
+      "type": "hasMany",
+      "model": "Todo",
+      "foreignKey": "usuarioId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
